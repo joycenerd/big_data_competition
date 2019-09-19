@@ -26,7 +26,7 @@ print(sub_df.corr()['Y1'])
 r_col = ["X_B_IND" , "X_C_IND" , "X_E_IND" , "X_H_IND" , "TOOL_VISIT_1YEAR_CNT" , "DIEBENEFIT_AMT" , 
 "DIEACCIDENT_AMT" , "MONTHLY_CARE_AMT" , "LIFE_INSD_CNT" , "IF_ISSUE_INSD_I_IND"]
 
-'''
+
 for i in r_col : 
 	plt.scatter(range(100000) , train_df[i])
 	plt.xlabel("count")
@@ -38,4 +38,4 @@ for i in r_col :
 	if train_df[i].nunique() > 2 : 
 		sns.boxplot(x = 'Y1' , y = i , data = train_df , palette = "hls")
 		plt.show()
-'''
+
