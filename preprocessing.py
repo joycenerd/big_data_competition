@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 import seaborn as sns
+import sklearn 
 
 
 data_path = "D:/VScode workshop/big_data_competition/data/"
@@ -35,10 +36,7 @@ for i in bin_col :
 
 r_col = ["X_B_IND" , "X_C_IND" , "X_E_IND" , "X_H_IND" , "TOOL_VISIT_1YEAR_CNT" , "DIEBENEFIT_AMT" , 
 "DIEACCIDENT_AMT" , "MONTHLY_CARE_AMT" , "LIFE_INSD_CNT" , "IF_ISSUE_INSD_I_IND"]
-#r_df = train_df.loc[: , r_col]
-#print(r_df)
 
-print(train_df['X_B_IND'].head())
 
 for i in r_col : 
 	plt.scatter(range(100000) , train_df[i])
