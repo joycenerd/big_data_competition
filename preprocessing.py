@@ -45,7 +45,7 @@ def box_plot(train_df , col) :
 train_df = read_data()
 train_df = transform_label_data(train_df)
 cor_Y1 = get_corrcoef(train_df , 73 , 109)
-r_col = cor_Y1.sort_values()[:10].index.to_list()
+r_col = cor_Y1.sort_values(ascending = False)[:10].index.to_list()
 EDA_scatter(train_df , r_col)
 box_plot(train_df , r_col)
 
